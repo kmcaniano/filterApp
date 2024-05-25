@@ -16,6 +16,9 @@ export async function getUsers(query: FilterQuery<User>): Promise<Array<User>> {
     return await userModel.find(query).sort({ lastName: 'asc', firstName: 'asc', company: 'asc' });
 }
 
+/**
+ * Initial population of users in database. Should only run once.
+ */
 export async function populateUsers() {
     if (await userModel.countDocuments() == 0) {
         const usersToAdd = [{

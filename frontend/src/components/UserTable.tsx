@@ -22,7 +22,7 @@ export default function UserTable() {
           <TableCell sx={{ fontWeight: 'bold' }}>First Name</TableCell>
           <TableCell sx={{ fontWeight: 'bold' }}>Last Name</TableCell>
           <TableCell sx={{ fontWeight: 'bold' }}>Company</TableCell>
-        </TableRow>ß
+        </TableRow>
         {users.map((user, i) => (
           <TableRow key={i} data-testid="user-rows" style={i % 2 ? { background: "#1CE783" } : { background: "white" }}>
             <TableCell scope="row">
